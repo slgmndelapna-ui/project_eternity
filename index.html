@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A private message retrieval experience.">
+  <title>PROJECT ETERNITY // Message Retrieval</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">E</span><div><strong>ETERNITY</strong><small>PERSONAL MESSAGE ARCHIVE</small></div></div>
+      <div class="system-state"><span class="pulse"></span> SYSTEM ONLINE <span class="version">v1.0.0</span></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PRIVATE TRANSMISSION // RECIPIENT: KAZ</p>
+      <h1>Some things are<br><em>worth keeping.</em></h1>
+      <p class="intro">A small archive of thoughts, memories, and things that are sometimes easier to write than to say.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="panel-title">
+      <div class="panel-heading">
+        <div><span class="step-label">01 / AUTHENTICATION</span><h2 id="panel-title">Verify access</h2></div>
+        <span class="lock-icon" aria-hidden="true">⌑</span>
+      </div>
+      <p class="panel-copy">This archive requires a passphrase before the message can be retrieved.</p>
+      <form id="auth-form" autocomplete="off">
+        <label for="passphrase">PASSPHRASE</label>
+        <div class="input-row">
+          <input id="passphrase" type="password" placeholder="Enter the passphrase..." required>
+          <button class="primary-btn" type="submit">AUTHORIZE <span>→</span></button>
+        </div>
+      </form>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">AWAITING CREDENTIALS...</p>
+    </section>
+
+    <section id="archive" class="panel archive hidden" aria-live="polite">
+      <div class="panel-heading">
+        <div><span class="step-label">02 / ARCHIVE DECRYPTED</span><h2>Message retrieved</h2></div>
+        <span class="unlock-icon">✓</span>
+      </div>
+      <div class="metadata">
+        <div><span>RECIPIENT</span><strong id="recipient-name">KAZ</strong></div>
+        <div><span>RECORD TYPE</span><strong>PERSONAL MESSAGE</strong></div>
+        <div><span>STATUS</span><strong class="status-good">VERIFIED</strong></div>
+      </div>
+      <div class="message-window">
+        <div class="window-bar"><span></span><span></span><span></span><small>message.txt</small></div>
+        <p id="message-output"></p>
+      </div>
+      <p class="signature">END OF TRANSMISSION <span>♥</span></p>
+    </section>
+
+    <footer><span>PROJECT ETERNITY</span><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>© PERSONAL ARCHIVE</span></footer>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
